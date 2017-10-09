@@ -27,7 +27,6 @@ func GetPosition() (int, int) {
 
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", STOCK_URL, nil)
-	req.Header.Set("User-Agent", "Chrome/61.0")
 	res, err := client.Do(req)
 	if err != nil {
 		log.Fatal(err)
